@@ -1,0 +1,47 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #0f172a;
+    color: #f8fafc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    margin-bottom: 2rem;
+    color: #38bdf8;
+}
+
+.clock-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.clock-card {
+    background: #1e293b;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    width: 220px;
+    text-align: center;
+    border: 1px solid #334155;
+}
+
+.zone-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #94a3b8;
+}
+
+.time-display {
+    font-size: 1.8rem;
+    font-family: monospace;
+    font-weight: bold;
+    color: #38bdf8;
+}
