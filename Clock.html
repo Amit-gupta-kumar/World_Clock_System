@@ -1,1 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Clock Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+    <h1>🌍 World Time Dashboard</h1>
+
+    <div class="clock-container">
+        <div class="clock-card">
+            <div class="zone-name">Your Location</div>
+            <div class="time-display" id="local-time">00:00:00</div>
+        </div>
+
+        <div class="clock-card">
+            <div class="zone-name">London (GMT)</div>
+            <div class="time-display" id="london-time">00:00:00</div>
+        </div>
+
+        <div class="clock-card">
+            <div class="zone-name">New York (EST)</div>
+            <div class="time-display" id="ny-time">00:00:00</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
