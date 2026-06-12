@@ -78,15 +78,32 @@ function updateFullscreenText() {
     hour12: formatSetting === '12'
   });
 
+  // Calculate fullscreen full date text
+  const currentDateFull = new Date().toLocaleDateString('en-US', {
+    timeZone: cityData.tz,
+    weekday: 'long',
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  });
+
   document.getElementById('fs-city-name').textContent = cityData.name;
   document.getElementById('fs-country-name').textContent = cityData.country;
   document.getElementById('fs-big-time').textContent = currentTime;
+  document.getElementById('fs-big-date').textContent = currentDateFull;
 }
 
 function updateMasterClock() {
   const formatSetting = document.getElementById('fmt-select').value;
   document.getElementById('master-time').textContent = new Date().toLocaleTimeString('en-US', {
     hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: formatSetting === '12'
+  });
+
+  document.getElementById('master-date').textContent = new Date().toLocaleDateString('en-US', {
+    weekday: 'long',
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
   });
 
   renderCards();

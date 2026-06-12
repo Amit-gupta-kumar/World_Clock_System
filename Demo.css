@@ -143,3 +143,18 @@ input, select {
   color: #6c63ff;
   font-family: monospace;
 }
+
+.cc-date {
+  font-size: 11px;
+  color: #888aaa;
+  margin-top: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+#fs-big-date {
+  font-size: 20px;
+  color: #e8e8ff;
+  margin-top: 15px;
+  font-weight: 400;
+}
