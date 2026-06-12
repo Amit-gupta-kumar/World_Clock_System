@@ -1,47 +1,145 @@
+/* Clean Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Background & Global Font Styling */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #0f172a;
-    color: #f8fafc;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: #0a0a1a;
+  color: #e8e8ff;
+  padding: 30px;
 }
 
-h1 {
-    margin-bottom: 2rem;
-    color: #38bdf8;
+/* Header Text elements */
+#wc-header {
+  margin-bottom: 20px;
+  text-align: center;
 }
 
-.clock-container {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
+.wc-title {
+  color: #6c63ff;
+  font-size: 24px;
+  margin-bottom: 5px;
 }
 
+.wc-clock-big {
+  font-size: 36px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+/* Controls Configuration */
+.wc-controls {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+input, select {
+  background: #111128;
+  border: 1px solid #2a2a5a;
+  color: #e8e8ff;
+  padding: 8px 12px;
+  border-radius: 6px;
+  outline: none;
+}
+
+/* Flexible Grid Setup */
+.wc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+/* Simple Design for the Clock Cards */
 .clock-card {
-    background: #1e293b;
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    width: 220px;
-    text-align: center;
-    border: 1px solid #334155;
+  background: #181830;
+  border: 1px solid #2a2a5a;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
 }
 
-.zone-name {
-    font-size: 1.2rem;
-    font-weight: 600;
-    margin-bottom: 10px;
-    color: #94a3b8;
+.cc-city {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 2px;
 }
 
-.time-display {
-    font-size: 1.8rem;
-    font-family: monospace;
-    font-weight: bold;
-    color: #38bdf8;
+.cc-country {
+  font-size: 12px;
+  color: #888aaa;
+  margin-bottom: 15px;
+}
+
+.cc-time {
+  font-size: 24px;
+  color: #6c63ff;
+  font-weight: bold;
+}
+
+/* ─── Fullscreen Popup Styles ─────────────────────────── */
+
+/* This hides the popup completely by default */
+.fs-hidden {
+  display: none !important;
+}
+
+/* This makes the popup cover the entire screen when active */
+#fs-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #0a0a1a; /* Matches your dark background */
+  z-index: 999;              /* Makes sure it sits on top of everything else */
+  
+  /* Centers all text inside the screen vertically and horizontally */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Close Button positioning */
+#fs-close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #111128;
+  border: 1px solid #2a2a5a;
+  color: #e8e8ff;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#fs-close-btn:hover {
+  border-color: #6c63ff;
+}
+
+/* Giant Clock text sizes */
+#fs-city-name {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+#fs-country-name {
+  font-size: 16px;
+  color: #888aaa;
+  margin-bottom: 30px;
+}
+
+#fs-big-time {
+  font-size: 72px;
+  font-weight: bold;
+  color: #6c63ff;
+  font-family: monospace;
 }
